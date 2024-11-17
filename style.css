@@ -1,0 +1,56 @@
+body {
+    background-image: url("background.jpg");
+}
+
+table {
+    border-color: green;
+    border-width: medium;
+}
+
+td {
+    border-color: green;
+    border-width: medium;
+}
+
+tr {
+    border-color: green;
+    border-width: medium;
+}
+
+th {
+    border-color: green;
+    border-width: medium;
+}
+
+.stretch {
+    width: 200px;
+}
+
+td:hover, th:hover {
+    background-color: red;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: green;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: blue;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+table, th, td {
+    border: 2px solid;
+    border-color: green;
+}

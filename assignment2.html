@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Expense Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="myForm" onsubmit="submitForm(); return false;" onreset="window.location.reload();">
+        <h1>Travel Expense Report</h1>
+        <hr>
+        <h2>Traveller Information</h2>
+        <table id="traveller-info">
+            <tr>
+                <td>Employee ID</td>
+                <td><input type="number" name="employee_ID" required></td>
+                <td>Email</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="last_name" required></td>
+                <td>First Name</td>
+                <td><input type="text" name="first_name" required></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td colspan="3"><input type="text" size="57" title="123 Street" name="title" required></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text" name="city" required></td>
+                <td>State:</td>
+                <td><input type="text" name="state" required></td>
+            </tr>
+            <tr>
+                <td>Zip:</td>
+                <td><input type="number" name="zip" required></td>
+                <td>Phone:</td>
+                <td><input type="tel" name="phone" required></td>
+            </tr>
+        </table>
+        
+        <h2>Trip Information</h2>
+        <table id="trip-info">
+            <tr>
+                <th colspan="2">Date of Travel</th>
+                <th colspan="2">Date of Meeting</th>
+            </tr>
+            <tr>
+                <td>From:</td>
+                <td><input type="date" name="date" required></td>
+                <td>From:</td>
+                <td><input type="date" name="date" required></td>
+            </tr>
+            <tr>
+                <td>To:</td>
+                <td><input type="date" name="date" required></td>
+                <td>To:</td>
+                <td><input type="date" name="date" required></td>
+            </tr>
+            <tr>
+                <td>Purpose:</td>
+                <td colspan="3">
+                    <select name="Purpose" size="1">
+                        <option value="1">Professional Meeting</option>
+                        <option value="2">Personal Meeting</option>
+                        <option value="3">Vacation</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Level:</td>
+                <td colspan="3> 
+                    <input type="radio" name="level" value="Regional">Regional 
+                    <input type="radio" name="level" value="State">State
+                    <input type="radio" name="level" value="National">National 
+                    <input type="radio" name="level" value="International">International
+                </td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td colspan="3"><textarea rows="5" cols="62" name="Description"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">Was a personal vehicle used?</td>
+                <td colspan="2">
+                    <input type="radio" name="personal_vehicle" value="Yes">Yes 
+                    <input type="radio" name="personal_vehicle" value="No">No
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Was a company vehicle used?:</td>
+                <td colspan="2">
+                    <input type="radio" name="company_vehicle" value="Yes">Yes 
+                    <input type="radio" name="company_vehicle" value="No">No
+                </td>
+            </tr>
+        </table>
+
+        <h2>Itinerary Information</h2>
+        <table id="itinerary-info">
+            <tr>
+                <th>Date</th>
+                <th>Departed From</th>
+                <th>Arrived At</th>
+                <th>Mileage</th>
+                <th>Meals</th>
+                <th>Total Meal Costs</th>
+            </tr>
+            <tr>
+                <td><input type="date" name="date" required></td>
+                <td><input type="text" name="departed_from" required></td>
+                <td><input type="text" name="arrived_at" required></td>
+                <td><input type="number" name="mileage" min="0" required></td>
+                <td>
+                    <input type="checkbox" name="breakfast"> Breakfast
+                    <input type="checkbox" name="lunch"> Lunch
+                    <input type="checkbox" name="dinner"> Dinner
+                </td>
+                <td><input type="number" name="total_meal_costs" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="date" name="date" required></td>
+                <td><input type="text" name="departed_from" required></td>
+                <td><input type="text" name="arrived_at" required></td>
+                <td><input type="number" name="mileage" min="0" required></td>
+                <td>
+                    <input type="checkbox" name="breakfast"> Breakfast
+                    <input type="checkbox" name="lunch"> Lunch
+                    <input type="checkbox" name="dinner"> Dinner
+                </td>
+                <td><input type="number" name="total_meal_costs" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="date" name="date" required></td>
+                <td><input type="text" name="departed_from" required></td>
+                <td><input type="text" name="arrived_at" required></td>
+                <td><input type="number" name="mileage" min="0" required></td>
+                <td>
+                    <input type="checkbox" name="breakfast"> Breakfast
+                    <input type="checkbox" name="lunch"> Lunch
+                    <input type="checkbox" name="dinner"> Dinner
+                </td>
+                <td><input type="number" name="total_meal_costs" min="0"></td>
+            </tr>
+        </table>
+        
+        <hr>
+        <p>
+            <input type="submit" name="send" value="Send Report">
+            <input type="reset" name="clear" value="Clear Form">
+        </p>
+        <div id="summary" style="display:none;"></div>
+    </form>
+    
+    <script src="iTried.js"></script>
+</body>
+</html>
